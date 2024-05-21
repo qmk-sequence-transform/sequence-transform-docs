@@ -1,9 +1,3 @@
-# QMK Sequence Transform
-Sequence-Transform is a user library for QMK that enables a rich declarative ruleset for transforming a sequence of keypresses into any output you would like.
-
-Inspiration for Sequence-Transform was taken from Pascal Getreuer's innovative [Autocorrect feature](https://getreuer.info/posts/keyboards/autocorrection/index.html),
-without which we would not have even conceived this idea!
-
 # User Guide
 THIS LIBRARY IS NOT FINALIZED. A user who isn't looking to get involved in development should only use this right now if they want to test things out and are
 willing to deal with frequent breaking design changes.
@@ -12,12 +6,14 @@ Here is a [working example](https://github.com/Ikcelaks/qmk_userspace/tree/main/
 ### Step 1
 From a terminal with the current working directory set to your keymap directory (example: `qmk_userspace/keyboard/moonlander/keymaps/ikcelaks`), run this
 command to add the library as a git submodule (no need to create a fork first):<br/>
-`git submodule add https://github.com/ikcelaks/qmk_sequence_transform.git sequence_transform`
+```bash
+git submodule add https://github.com/ikcelaks/qmk_sequence_transform.git sequence_transform
+```
 
 ### Step 2
 At the end of your `rules.mk` file, add the following lines:</br>
 **IMPORTANT!** The tab infront of `python3 ...` *MUST* be an actual tab character. Replacing with spaces will break things.
-```mk
+```makefile
 # sequence_transform setup
 mkfile_dir := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
 
