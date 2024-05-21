@@ -1,0 +1,17 @@
+[book]
+authors = ["Matt Skalecki"]
+language = "en"
+multilingual = false
+title = "QMK Sequence Transform Docs"
+
+# [preprocessor.toc]
+# command = "mdbook-toc"
+# renderer = ["html"]
+
+[output.html]
+site-url = "/docs/"
+default-theme = "Rust"
+preferred-dark-theme = "Rust"
+git-repository-url="https://github.com/qmk-sequence-transform/sequence-transform-docs"
+additional-css = ["theme/pagetoc.css"]
+additional-js  = ["theme/pagetoc.js"]
